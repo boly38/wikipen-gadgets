@@ -9,6 +9,11 @@ Ce projet a pour objectif de contenir les sources du ou des gadgets relatif au s
 Pour *ajouter le gadget Wikipen* :
 [http://fusion.google.com/add?moduleurl=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml http://buttons.googlesyndication.com/fusion/add.gif]
 
+
+_N'hesitez pas à l'ajouter, s'il obtiens un nombre suffisant d'inscrit, ce dernier pourra ainsi être référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
+
+
+
 Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * aller sur [http://www.google.fr/ig/directory?hl=fr&root=/ig&igtab=Outils+&dpos=top Ajouter des modules]
  * cliquer sur "Ajouter une URL"

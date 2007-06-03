@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-
+#labels Featured
 = Introduction =
 Ce projet a pour objectif de contenir les sources du ou des gadgets relatif au site http://fr.wikipen.org
 
@@ -21,7 +20,6 @@ Ou totu simplement cliquer ci-dessous :)
 
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-
 
 
 

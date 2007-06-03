@@ -7,20 +7,20 @@ Ce projet a pour objectif de contenir les sources du ou des gadgets relatif au s
 
 == Utiliser le gadget ==
 Pour *ajouter le gadget Wikipen* :
- * aller sur http://www.google.fr/ig/directory?hl=fr&root=/ig&igtab=Outils+&dpos=top
- * cliquer sur "Ajouter une URL"
- * Entrer le texte suivant et valider : http://wikipen-gadgets.googlecode.com/svn/wikipen.xml
-
-Ou totu simplement cliquer ci-dessous :)
-
 [http://fusion.google.com/add?moduleurl=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml http://buttons.googlesyndication.com/fusion/add.gif]
+
+Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
+ * aller sur [http://www.google.fr/ig/directory?hl=fr&root=/ig&igtab=Outils+&dpos=top Ajouter des modules]
+ * cliquer sur "Ajouter une URL"
+ * entrer le texte suivant et valider : http://wikipen-gadgets.googlecode.com/svn/wikipen.xml
+
+
 
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"
 
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-
 
 
 

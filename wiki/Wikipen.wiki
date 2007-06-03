@@ -31,8 +31,7 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * entrer le texte suivant et valider : http://wikipen-gadgets.googlecode.com/svn/wikipen.xml
 
 === Utiliser sur votre site web ===
- * Allez sur  
-[http://gmodules.com/ig/creator?synd=open&url=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml cette page]
+ * Allez sur [http://gmodules.com/ig/creator?synd=open&url=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml cette page]
  * Faites les modifications sur la forme (couleur, bordure, taille, ..)
  * Cliquez sur "Obtenir le code" 
  * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
@@ -45,5 +44,3 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-
-

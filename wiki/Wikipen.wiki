@@ -19,7 +19,7 @@ Dans le contenu, l'image de Wikipen est affichée et permet par un simple clic d
 
 == Utiliser le gadget ==
 
-_N'hesitez pas à l'ajouter, s'il obtiens un nombre suffisant d'inscrit, ce dernier pourra ainsi être référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
+_N'hesitez pas à l'ajouter, s'il obtient un nombre suffisant d'utilisation, ce dernier sera référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
 
 === Utiliser sur iGoogle ===
 Pour *ajouter le gadget Wikipen* :

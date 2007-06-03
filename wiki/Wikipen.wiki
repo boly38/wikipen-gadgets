@@ -19,8 +19,10 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"
 
+ Pour mémoire :
+ * [http://www.google.com/ig/submit envoi d'un gadget]
+ * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-
 
 

@@ -18,20 +18,24 @@ Dans le contenu, l'image de Wikipen est affichée et permet par un simple clic d
 = Details =
 
 == Utiliser le gadget ==
-Pour *ajouter le gadget Wikipen* :
-[http://fusion.google.com/add?moduleurl=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml http://buttons.googlesyndication.com/fusion/add.gif]
-
 
 _N'hesitez pas à l'ajouter, s'il obtiens un nombre suffisant d'inscrit, ce dernier pourra ainsi être référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
 
-
+=== Utiliser sur iGoogle ===
+Pour *ajouter le gadget Wikipen* :
+[http://fusion.google.com/add?moduleurl=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml http://buttons.googlesyndication.com/fusion/add.gif]
 
 Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * aller sur [http://www.google.fr/ig/directory?hl=fr&root=/ig&igtab=Outils+&dpos=top Ajouter des modules]
  * cliquer sur "Ajouter une URL"
  * entrer le texte suivant et valider : http://wikipen-gadgets.googlecode.com/svn/wikipen.xml
 
-
+=== Utiliser sur votre site web ===
+ * Allez sur  
+[http://gmodules.com/ig/creator?synd=open&url=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml cette page]
+ * Faites les modifications sur la forme (couleur, bordure, taille, ..)
+ * Cliquez sur "Obtenir le code" 
+ * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
 
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"
@@ -41,6 +45,5 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-
 
 

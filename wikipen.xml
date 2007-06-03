@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="iso8859-1"?>
 <Module>
-<ModulePrefs title="Wikipen - Random page"
+<ModulePrefs title="Wikipen Gadget - Random page"
              directory_title="Wikipen"
-             author="Boly38 / Brice"
-             author_email="boly38@gmail.com"
+             author="Brice Vandeputte"
+             author_email="bvandeputte@gmail.com"
              author_affiliation="Wikipen"
              author_location="Grenoble, FR"
              category="news" category2="tools"
              render_inline="optional"
              height="250"
-             description="Ce gadget affiche une page aleatoire de Wikipen 
-             (This widget display a random page of Wikipen)"
+             description="Projet Google Code : http://wikipen-gadgets.googlecode.com/
+             
+             Ce gadget affiche une page aleatoire de Wikipen 
+             (This widget display random page of Wikipen)"
              scrolling="true"
-             screenshot="http://boly38.free.fr/wikipenwidget.png"
-             thumbnail="http://boly38.free.fr/wikipenwidget.png" />             
+             screenshot="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png"
+             thumbnail="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png" />             
 <UserPref name="langue" datatype="enum" display_name="Langue" default_value="fr">
   <EnumValue value="fr"/>
   <EnumValue value="en"/>
@@ -159,7 +161,7 @@ return str;};
       <!-- <td><a href="javascript:initWP();"><img border="0" src="http://fr.wikipen.org/images/b/bc/Wiki.png" width="40px"/></a></td> -->
       <td colspan="2" style=background-color:lightgrey; "font: normal sans-serif;" valign="top" align="center">
      <a href="http://fr.wikipen.org" target="_new" style="text-decoration: none; font-size: 70%; font-face: sans-serif;font-style: bold ;">Wikipen</a>
-     <a href="javascript:initWP();" style="text-decoration: none; font-size: 70%; font-face: sans-serif;font-style: italic ;">Page aleatoire</a></i></td>
+     <a href="javascript:document.reload();" style="text-decoration: none; font-size: 70%; font-face: sans-serif;font-style: italic ;">Page aleatoire</a></i></td>
      </tr></table></body>
   </body>
 

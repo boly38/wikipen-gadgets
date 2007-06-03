@@ -15,7 +15,9 @@
              (This widget display random page of Wikipen)"
              scrolling="true"
              screenshot="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png"
-             thumbnail="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png" />             
+             thumbnail="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png">
+  <Require feature="analytics" /> 
+</ModulePrefs>                        
 <UserPref name="langue" datatype="enum" display_name="Langue" default_value="fr">
   <EnumValue value="fr"/>
   <EnumValue value="en"/>
@@ -26,6 +28,9 @@
   <div id="content___MODULE_ID__"></div>
   <script>
   
+  // Track this gadget using Google Analytics.
+     _IG_Analytics("UA-1988442-1", "/main");
+    
   // User options
 var wpUserName=wpUserName||'Wikipedian';
 var wpUserSignature=wpUserSignature||wpUserName;
@@ -236,8 +241,8 @@ return texte;
    var i = 0;
   
    function wpenreload() {
-               initText();
-               initWP();
+     _IG_Analytics('UA-1988442-1', '/main/reload');
+
    }
 
 
@@ -249,7 +254,8 @@ return texte;
       URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
       // alert("URLBASE : " + URL_BASE);       
       
-      wpenreload();
+       initText();
+       initWP();
     });
     
     function setNewText(title, htmlcontent, lastauthor) {

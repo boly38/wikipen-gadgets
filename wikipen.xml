@@ -106,6 +106,12 @@ bin[i>>5]|=(str.charCodeAt(i/chrsz)&mask)<<(i%32);return bin;};function binl2hex
 hex_tab.charAt((binarray[i>>2]>>((i%4)*8))&0xF);}
 return str;};
   
+   function reload() {
+              _gel('wptitle').innerHTML = "";
+              _gel('wpautor').innerHTML = "";
+              _gel('wptext').innerHTML  = "";
+               initWP();
+   }
 
 
     // _IG_RegisterOnloadHandler(function () {
@@ -158,11 +164,18 @@ return str;};
        <span  style="font: small sans-serif;">(derni&egrave;re modification par <span id="wpautor" style="font: small sans-serif;"></span>)</span>
      </td></tr>
      <tr height="10px">
-      <!-- <td><a href="javascript:initWP();"><img border="0" src="http://fr.wikipen.org/images/b/bc/Wiki.png" width="40px"/></a></td> -->
-      <td colspan="2" style=background-color:lightgrey; "font: normal sans-serif;" valign="top" align="center">
-     <a href="http://fr.wikipen.org" target="_new" style="text-decoration: none; font-size: 70%; font-face: sans-serif;font-style: bold ;">Wikipen</a>
-     <a href="javascript:document.reload();" style="text-decoration: none; font-size: 70%; font-face: sans-serif;font-style: italic ;">Page aleatoire</a></i></td>
-     </tr></table></body>
+      <td>
+        <a href="javascript:reload();">
+          <img border="0" src="http://fr.wikipen.org/images/b/bc/Wiki.png" width="40px"/>
+      </a></td>
+      <td colspan="2" style="font: normal sans-serif;" align="right" valign="bottom">
+        <a href="http://fr.wikipen.org" target="_new"
+           style="text-decoration: none; font-size: 70%; font-style: italic;">Wikipen</a>
+         <a href="javascript:reload();" 
+           style="text-decoration: none; font-size: 70%;font-style: italic ;">Page al&eacute;atoire</a>
+      </td>
+     </tr>
+    </table>
   </body>
 
 ]]></Content>

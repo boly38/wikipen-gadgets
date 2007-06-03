@@ -29,7 +29,7 @@
   <script>
   
   // Track this gadget using Google Analytics.
-     _IG_Analytics("UA-1988442-1", "/main");
+
     
   // User options
 var wpUserName=wpUserName||'Wikipedian';
@@ -235,13 +235,13 @@ return texte;
 
 
 
-
+     _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
 
    var URL_BASE = "http://fr.wikipen.org/wiki";
    var i = 0;
   
    function wpenreload() {
-     _IG_Analytics('UA-1988442-1', '/main/reload');
+     _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
        initText();
        initWP();
    }

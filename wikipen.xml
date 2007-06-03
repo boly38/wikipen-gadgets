@@ -323,7 +323,7 @@ return texte;
     padding:0;
     line-height:1.5em;
     color: #29303B;
-    font: normal Arial, Times New Roman, sans-serif;
+    font-family: Arial, sans-serif;
   }
   </style>
   <body>

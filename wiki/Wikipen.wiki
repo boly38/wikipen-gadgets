@@ -1,6 +1,10 @@
 #labels Featured
 = Introduction =
-Ce projet a pour objectif de contenir les sources du ou des Gadgets (Widget) [http://www.google.fr/ig?hl=fr iGoogle] pour [http://fr.wikipen.org Wikipen].
+Ce projet a pour objectif de contenir les sources du ou des Gadgets (Widget) [http://fr.wikipen.org Wikipen].
+
+Ce gadget pourra s'afficher :
+ * sur [http://www.google.fr/ig?hl=fr iGoogle]
+ * ou bien sur [http://gmodules.com/ig/creator?synd=open&url=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml votre page web] ([http://boly38.free.fr exemple])
 
 Le principe est assez simple :
  * Récupérer le nom d'un texte grâce à la page "un texte au hasard"

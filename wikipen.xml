@@ -242,7 +242,8 @@ return texte;
   
    function wpenreload() {
      _IG_Analytics('UA-1988442-1', '/main/reload');
-
+       initText();
+       initWP();
    }
 
 

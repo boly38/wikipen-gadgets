@@ -56,13 +56,65 @@ function wiki2html(str)
 {this.html+=str;this.lines.shift();};this.parse=function()
 {var p=false;do{if(h_match=this.lines[0].match(/^(={1,6})(.*)\1(.*)$/)){p=false;this._endline('<h'+h_match[1].length+'>'+_parse_inline_nowiki(h_match[2])+'</h'+h_match[1].length+'>'+h_match[3]);}else if(this.lines[0].match(/^[*#:;]/)){p=false;this._parse_list();}else if(this.lines[0].charAt(0)==' ' ){p=false;this._parse_pre();}else if(this.lines[0].substr(0,2)=='{|'){p=false;this._parse_table();}else if(this.lines[0].match(/^----+$/)){p=false;this._endline('<hr/>');}else if(this.lines[0].match(wpBlockImage)){p=false;this._parse_block_image();}else{if(this.lines[0]==''){if(p=(this.lines.length>1&&this.lines[1]=='')){this._endline('<p><br />');}}else{if(!p){this.html+='<p>';p=true;}
 this.html+=_parse_inline_nowiki(this.lines[0])+' ';}
-this.lines.shift();}}while(this.lines.length);};this._parse_list=function(){var prev=new String;var l_match,imatch,dt_match;while(this.lines.length&&(l_match=this.lines[0].match(/^([*#:;]+)(.*)$/))){this.lines.shift();imatch=str_imatch(prev,l_match[1]);for(var i=prev.length-1;i>=imatch;i--){if(prev.charAt(i)=='*'){this.html+='</ul>';}else if(prev.charAt(i)=='#'){this.html+='</ol>'}else{this.html+='</d'+((prev.charAt(i)==';')?'t':'d')+'>';switch(l_match[1].charAt(i)){case'':case'*':case'#':this.html+='</dl>';}}}
-for(var i=imatch;i<l_match[1].length;i++){if(l_match[1].charAt(i)=='*'){this.html+='<ul>';}else if(l_match[1].charAt(i)=='#'){this.html+='<ol>';}else{switch(prev.charAt(i)){case'':case'*':case'#':this.html+='<dl>';}
-this.html+='<d'+((l_match[1].charAt(i)==';')?'t':'d')+'>';}}
-switch(l_match[1].charAt(l_match[1].length-1)){case'*':case'#':this.html+='<li>'+_parse_inline_nowiki(l_match[2]);break;case';':if(dt_match=l_match[2].match(/(.*?) (:.*?)$/)){this.html+=_parse_inline_nowiki(dt_match[1]);this.lines.unshift(dt_match[2]);break;}
-case':':this.html+=_parse_inline_nowiki(l_match[2]);}
-prev=l_match[1];}
-for(i=prev.length-1;i>=0;i--){if(prev.charAt(i)=='*'){this.html+='</ul>';}else if(prev.charAt(i)=='#'){this.html+='</ol>';}else{this.html+='</d'+((prev.charAt(i)==';')?'t':'d')+'></dl>';}}};this._parse_table=function()
+this.lines.shift();}}while(this.lines.length);};
+this._parse_list=function()
+  { var prev=new String;
+    var l_match,imatch,dt_match;
+    while(this.lines.length&&(l_match=this.lines[0].match(/^([*#:;]+)(.*)$/))) {
+      this.lines.shift();
+      imatch=str_imatch(prev,l_match[1]);
+      for(var i=prev.length-1;i>=imatch;i--) {
+        if(prev.charAt(i)=='*'){
+          this.html+='</ul>';
+        }else if(prev.charAt(i)=='#'){
+          this.html+='</ol>'
+        }else{
+          this.html+='</d'+((prev.charAt(i)==';')?'t':'d')+'>';
+          switch(l_match[1].charAt(i)){
+           case'':case'*':case'#':this.html+='</dl>';
+          }
+        }
+      }
+      for(var i=imatch;i<l_match[1].length;i++){
+        if(l_match[1].charAt(i)=='*'){
+          this.html+='<ul>';
+        }else if(l_match[1].charAt(i)=='#'){
+          this.html+='<ol>';
+        }else{
+          switch(prev.charAt(i)){
+            case'':case'*':case'#':this.html+='<dl>';
+          }
+          this.html+='<d'+((l_match[1].charAt(i)==';')?'t':'d')+'>';
+        }
+      }
+      switch(l_match[1].charAt(l_match[1].length-1)){
+        case'*':case'#':this.html+='<li>'+_parse_inline_nowiki(l_match[2]);
+          break;
+        case';':
+          if(dt_match=l_match[2].match(/(.*?) (:.*?)$/)){
+            this.html+=_parse_inline_nowiki(dt_match[1]);
+            this.lines.unshift(dt_match[2]);
+            break;
+          }
+        case':':
+          this.html+=_parse_inline_nowiki(l_match[2]);
+      }
+      prev=l_match[1];
+    }
+    for(i=prev.length-1;i>=0;i--){
+      if(prev.charAt(i)=='*'){
+        this.html+='</ul>';
+      }else if(prev.charAt(i)=='#'){
+        this.html+='</ol>';
+      }else{
+        this.html+='</d'+((prev.charAt(i)==';')?'t':'d')+'></dl>';
+      }
+      if(prev.charAt(i)==':'){
+        this.html+='<br/>';
+      }
+    }
+  };
+this._parse_table=function()
 {var table_match;if(table_match=this.lines[0].match(/^\{\|( .*)$/)){this._endline('<table'+table_match[1]+'>');}else this._endline('<table>');do{if(this.lines[0].charAt(0)=='|'){switch(this.lines[0].charAt(1)){case'}':this._endline('</table>');return;case'-':this._endline('<tr '+this.lines[0].match(/\|-*(.*)/)[1]+'>');break;default:this._parse_table_data();}}else if(this.lines[0].charAt(0)=='!'){this._parse_table_data();}else{this.lines.shift();}}while(this.lines.length)};this._parse_table_data=function()
 {var td_match,td_line;td_match=this.lines.shift().match(/^(\|\+|\||!)((?:([^[|]*?)\|(?!\|))?(.*))$/);if(td_match[1]=='|+'){this.html+='<caption';}else{this.html+='<t'+((td_match[1]=='|')?'d':'h');}
 if(typeof td_match[3]!='undefined'){this.html+=' ' +td_match[3];td_line=td_match[4].split('||');}else{td_line=td_match[2].split('||');}
@@ -331,22 +383,32 @@ return texte;
    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
           style="background-color:#ffa; text-align:justify; padding:5px;">
      <tr height="10px">
-      <td>
+      <td width="40px">
         <a href="javascript:wpenreload();">
           <img border="0" src="http://fr.wikipen.org/images/b/bc/Wiki.png" width="40px"/>
-      </a></td>
-      <td colspan="2" style="font: normal sans-serif;" align="right" valign="bottom">
-        <a href="http://fr.wikipen.org" target="_new"
-           style="text-decoration: none; font-size: 70%; font-style: italic;">Wikipen</a>
-         <a href="javascript:wpenreload();" 
-           style="text-decoration: none; font-size: 70%;font-style: italic ;">Page al&eacute;atoire</a>
+        </a>
+      </td>
+      <td style="font: normal sans-serif;" align="right" valign="bottom">
+         <span id="wpentitle" class="description" style="font-size: 90%; font-style: italic ;" ></span><br/>
+      </td>
+     </tr>
+     <tr>
+      <td colspan="2">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+         <tr><td>
+           <a href="http://fr.wikipen.org" target="_new"
+            style="text-decoration: none; font-size: 70%; font-style: italic;">Wikipen</a>
+           <a href="javascript:wpenreload();" 
+            style="text-decoration: none; font-size: 70%;font-style: italic ;">Page al&eacute;atoire</a><br/>
+          </td><td align="right">
+           <span class="description" style="font-size: 60%; font-style: italic ;">derni&egrave;re modification par</span> 
+           <span id="wpenautor" class="description" style="font-size: 60%; font-style: italic ;"></span>
+          </td>
+         </tr></table>
       </td>
      </tr>
      <tr><td colspan="2" valign="top">
-       <span id="wpentitle" class="description" style="font-size: 110%; font-style: italic ;" ></span>
        <span id="wpentext"  class="description" style="font-size: 80%;">(...)</span>
-       <span                class="description" style="font-size: 60%; font-style: italic ;">derni&egrave;re modification par</span> 
-       <span id="wpenautor" class="description" style="font-size: 60%; font-style: italic ;"></span>
      </td></tr>
     </table>
   </body>

@@ -44,3 +44,4 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
+

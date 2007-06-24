@@ -19,7 +19,7 @@ Dans le contenu, l'image de Wikipen est affichée et permet par un simple clic d
 
 == Utiliser le gadget ==
 
-_N'hesitez pas à l'ajouter, s'il obtient un nombre suffisant d'utilisation, ce dernier sera référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
+_Ce gadge est référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
 
 === Utiliser sur iGoogle ===
 Pour *ajouter le gadget Wikipen* :
@@ -44,4 +44,3 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)
-

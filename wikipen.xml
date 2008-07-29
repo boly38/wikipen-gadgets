@@ -281,10 +281,11 @@ return texte;
     }; 
     
     function initWP(articleName) {
-      if (articleName == "")
-       articleName = "Special:Random";
       i = (new Date()).getTime();
-      var url = URL_BASE + "/" + articleName + "/" + i;
+      if (articleName == "") {
+       articleName = "Special:Random" + "/" + i;
+      }
+      var url = URL_BASE + "/" + articleName;
       _IG_FetchContent(url, function (response) {
         var nxsl = xmlParse('<a select="/html/body/div/div/div/h1" content="."/>');
         nxslProcess(xmlParse(response), nxsl);

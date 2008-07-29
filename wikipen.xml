@@ -270,7 +270,7 @@ return texte;
               _gel('wpentext').innerHTML  = htmlcontent;
     };
     
-    fonction initWPT(aAfficher) {
+    function initWPT(aAfficher) {
       initText();
       initWP(aAfficher);
     }

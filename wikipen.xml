@@ -254,7 +254,7 @@ return texte;
     _IG_RegisterOnloadHandler(function () {
       var prefs = new _IG_Prefs(__MODULE_ID__);
       wpLanguageCode = prefs.getString("langue");
-      wpBaseArticlePath='http://' + wpLanguageCode + '.wikipen.org/wouiki/';
+      wpBaseArticlePath='http://' + wpLanguageCode + '.wikipen.org/wiki/';
       wpImageBasePath='http://' + wpLanguageCode + '.wikipen.org/images/'+wpLanguageCode+'/';
       URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
       // alert("URLBASE : " + URL_BASE);       

@@ -87,7 +87,7 @@ caption=_strip_inline_wiki(caption);return"<a class='image' title='"+caption+"' 
 {var start,substart=0,nestlev=0;var loop,close,open,wiki,html;while(-1!=(start=str.indexOf('[[',substart))){if(str.substr(start+2).match(RegExp('^'+wpImageNamespace+':','i'))){loop=true;substart=start;do{substart+=2;close=str.indexOf(']]',substart);open=str.indexOf('[[',substart);if(close<=open||open==-1){if(close==-1)return str;substart=close;if(nestlev){nestlev--;}else{wiki=str.substring(start,close+2);html=_parse_image(wiki);str=str.replace(wiki,html);substart=start+html.length;loop=false;}}else{substart=open;nestlev++;}}while(loop);}else{break;}}
 return str;};function _parse_inline_wiki(str)
 {var aux_match,math_md5;str=_parse_inline_images(str);while(aux_match=str.match(/<(?:)math>(.*?)<\/math>/i)){math_md5=hex_md5(aux_match[1]);str=str.replace(aux_match[0],"<img src='"+wpMathBasePath+math_md5+'.png'+"' />");}
-return str.replace(/'''''(.*?)''(.*?)'''/g,'<strong><em>$1</em>$2</strong>').replace(/'''''(.*?)'''(.*?)''/g,'<em><strong>$1</strong>$2</em>').replace(/'''(.*?)''(.*?)'''''/g,'<strong>$1<em>$2</em></strong>').replace(/'''(.*?)'''/g,'<strong>$1</strong>').replace(/''(.*?)''/g,'<em>$1</em>').replace(/~{5}(?!~)/g,Date()).replace(/~{4}(?!~)/g,wpSignature+' '+Date()).replace(/~{3}(?!~)/g,wpSignature).replace(RegExp('\\[\\[:((?:'+wpCategoryNamespace+'|'+wpInterwikiCodes+'):.*?)\\]\\]','gi'),"<a href='"+wpBaseArticlePath+"$1'>$1</a>").replace(RegExp('\\[\\[(?:'+wpCategoryNamespace+'|'+wpInterwikiCodes+'):.*?\\]\\]','gi'),'').replace(/\[\[([^|]*?)\]\](\w*)/g,"<a href='"+wpBaseArticlePath+"$1'>$1$2</a>").replace(/\[\[(.*?)\|([^\]]+?)\]\](\w*)/g,"<a href='"+wpBaseArticlePath+"$1'>$2$3</a>").replace(/\[\[([^\]]*?:)?(.*?)( *\(.*?\))?\|\]\]/g,"<a href='"+wpBaseArticlePath+"$1$2$3'>$2</a>").replace(/\[(http|news|ftp|mailto|gopher|irc):(\/*)([^\]]*?) (.*?)\]/g,"<a href='$1:$2$3'>$4</a>").replace(/\[http:\/\/(.*?)\]/g,"<a href='http://$1'>[#]</a>").replace(/\[(news|ftp|mailto|gopher|irc):(\/*)(.*?)\]/g,"<a href='$1:$2$3'>$1:$2$3</a>").replace(/(^| )(http|news|ftp|mailto|gopher|irc):(\/*)([^ $]*)/g,"$1<a href='$2:$3$4'>$2:$3$4</a>").replace('__NOTOC__','').replace('__NOEDITSECTION__','');};function _strip_inline_wiki(str)
+return str.replace(/'''''(.*?)''(.*?)'''/g,'<strong><em>$1</em>$2</strong>').replace(/'''''(.*?)'''(.*?)''/g,'<em><strong>$1</strong>$2</em>').replace(/'''(.*?)''(.*?)'''''/g,'<strong>$1<em>$2</em></strong>').replace(/'''(.*?)'''/g,'<strong>$1</strong>').replace(/''(.*?)''/g,'<em>$1</em>').replace(/~{5}(?!~)/g,Date()).replace(/~{4}(?!~)/g,wpSignature+' '+Date()).replace(/~{3}(?!~)/g,wpSignature).replace(RegExp('\\[\\[:((?:'+wpCategoryNamespace+'|'+wpInterwikiCodes+'):.*?)\\]\\]','gi'),"<a href='"+wpBaseArticlePath+"$1' onclick='javascript:initWPT(\"$1\");'>$1</a>").replace(RegExp('\\[\\[(?:'+wpCategoryNamespace+'|'+wpInterwikiCodes+'):.*?\\]\\]','gi'),'').replace(/\[\[([^|]*?)\]\](\w*)/g,"<a href='"+wpBaseArticlePath+"$1'>$1$2</a>").replace(/\[\[(.*?)\|([^\]]+?)\]\](\w*)/g,"<a href='"+wpBaseArticlePath+"$1'>$2$3</a>").replace(/\[\[([^\]]*?:)?(.*?)( *\(.*?\))?\|\]\]/g,"<a href='"+wpBaseArticlePath+"$1$2$3'>$2</a>").replace(/\[(http|news|ftp|mailto|gopher|irc):(\/*)([^\]]*?) (.*?)\]/g,"<a href='$1:$2$3'>$4</a>").replace(/\[http:\/\/(.*?)\]/g,"<a href='http://$1'>[#]</a>").replace(/\[(news|ftp|mailto|gopher|irc):(\/*)(.*?)\]/g,"<a href='$1:$2$3'>$1:$2$3</a>").replace(/(^| )(http|news|ftp|mailto|gopher|irc):(\/*)([^ $]*)/g,"$1<a href='$2:$3$4'>$2:$3$4</a>").replace('__NOTOC__','').replace('__NOEDITSECTION__','');};function _strip_inline_wiki(str)
 {return str.replace(/\[\[[^\]]*\|(.*?)\]\]/g,'$1').replace(/\[\[(.*?)\]\]/g,'$1').replace(/''(.*?)''/g,'$1');};function max(a,b)
 {if(a>b)return a;else return b;};function min(a,b)
 {if(a<b)return a;else return b;};function str_imatch(str_a,str_b)
@@ -246,8 +246,7 @@ return texte;
   
    function wpenreload() {
      _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
-       initText();
-       initWP();
+       initWPT('');
    }
 
 
@@ -259,8 +258,7 @@ return texte;
       URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
       // alert("URLBASE : " + URL_BASE);       
       
-       initText();
-       initWP();
+       initWPT('');
     });
     
     function setNewText(title, htmlcontent, lastauthor) {
@@ -272,13 +270,20 @@ return texte;
               _gel('wpentext').innerHTML  = htmlcontent;
     };
     
+    fonction initWPT(aAfficher) {
+      initText();
+      initWP(aAfficher);
+    }
+    
     function initText() {
       setNewText("", "Veuillez patienter...", "(...)");
     }; 
     
-    function initWP() {
-      i = i+1;
-      var url = URL_BASE + "/Special:Random/" + i;
+    function initWP(articleName) {
+      if (articleName == "")
+       articleName = "Special:Random";
+      i = (new Date()).getTime();
+      var url = URL_BASE + "/" + articleName + "/" + i;
       _IG_FetchContent(url, function (response) {
         var nxsl = xmlParse('<a select="/html/body/div/div/div/h1" content="."/>');
         nxslProcess(xmlParse(response), nxsl);

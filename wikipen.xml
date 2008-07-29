@@ -9,10 +9,14 @@
              category="news" category2="tools"
              render_inline="optional"
              height="250"
-             description="Projet Google Code : http://wikipen-gadgets.googlecode.com/
-             
-             Ce gadget affiche une page aleatoire de Wikipen 
-             (This widget display random page of Wikipen)"
+             description="Wikipen Gadget
+             ----
+             Google Code Project http://wikipen-gadgets.googlecode.com/
+             This gadget load a Wikipen text into the gadget : define language (fr / en), load a text (from the wiki) on widget load, 
+             reload on demand a new text, display meta-data informations (date, author, ...).
+             ---- 
+             Ce gadget affiche une page aléatoire du wiki littéraire Wikipen http://fr.wikipen.org 
+             "
              scrolling="true"
              screenshot="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png"
              thumbnail="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png">

@@ -15,7 +15,7 @@
              This gadget load a Wikipen text into the gadget : define language (fr / en), load a text (from the wiki) on widget load, 
              reload on demand a new text, display meta-data informations (date, author, ...).
              ---- 
-             Ce gadget affiche une page aléatoire du wiki littéraire Wikipen http://fr.wikipen.org 
+             Ce gadget affiche une page aleatoire du wiki litteraire Wikipen http://fr.wikipen.org 
              "
              scrolling="true"
              screenshot="http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png"

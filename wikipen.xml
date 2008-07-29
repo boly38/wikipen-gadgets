@@ -166,7 +166,7 @@ hex_tab.charAt((binarray[i>>2]>>((i%4)*8))&0xF);}
 return str;};
 
  function HTMLentities(texte) {
-
+/*
 // Boly // texte = texte.replace(/"/g,'&quot;'); // 34 22
 // Boly // texte = texte.replace(/&/g,'&amp;'); // 38 26
 // Boly // texte = texte.replace(/\'/g,'&#39;'); // 39 27
@@ -285,6 +285,7 @@ texte = texte.replace(/ü/g,'&uuml;'); // 252 FC
 texte = texte.replace(/ý/g,'&yacute;'); // 253 FD
 texte = texte.replace(/þ/g,'&thorn;'); // 254 FE
 texte = texte.replace(/ÿ/g,'&yuml;'); // 255 FF
+*/
 return texte;
 }
 

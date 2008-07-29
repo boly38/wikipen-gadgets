@@ -2,16 +2,16 @@
 = Introduction =
 Ce projet a pour objectif de contenir les sources du ou des Gadgets (Widget) [http://fr.wikipen.org Wikipen].
 
-Ce gadget pourra s'afficher :
+Le gadget Wikipen peut s'afficher :
  * sur [http://www.google.fr/ig?hl=fr iGoogle]
  * ou bien sur [http://gmodules.com/ig/creator?synd=open&url=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml votre page web] ([http://boly38.free.fr exemple])
 
 Le principe est assez simple :
  * Récupérer le nom d'un texte grâce à la page "un texte au hasard"
- * Récupérer le contenu de l'article grâce à la page d'export
+ * Récupérer le contenu du texte (directement depuis [http://fr.wikipen.org wikipen (fr)] ou [http://en.wikipen.org wikipen (en)] suivant les préférences)
  * Afficher dans le gadget le titre et le contenu récupéré 
 
-Dans le contenu, l'image de Wikipen est affichée et permet par un simple clic de relancer ce processus.
+L'image de Wikipen affichée en haut du gadget permet par un simple clic de relancer ce processus.
 
 [http://fusion.google.com/add?moduleurl=http%3A//wikipen-gadgets.googlecode.com/svn/wikipen.xml http://wikipen-gadgets.googlecode.com/svn/wikipenwidget.png]
 
@@ -19,7 +19,7 @@ Dans le contenu, l'image de Wikipen est affichée et permet par un simple clic d
 
 == Utiliser le gadget ==
 
-_Ce gadge est référencé dans le [http://www.google.com/ig/directory?source=gapi dictionnaire de gadgets de Google]_
+_Ce gadge est référencé dans le [http://www.google.com/ig/directory?q=wikipen&source=gapi dictionnaire de gadgets de Google]_
 
 === Utiliser sur iGoogle ===
 Pour *ajouter le gadget Wikipen* :
@@ -41,6 +41,14 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
 
  Pour mémoire :
  * [http://www.google.com/ig/submit envoi d'un gadget]
- * [http://www.google.com/apis/gadgets/gs.html#Scratchpad test d'un gadget]
+
+=== Evolution du 29/07/2008 ===
+_pour mettre à jour votre gadget, pensez à vider le cache de votre navigateur, supprimer le gadget et le réintroduire à nouveau par la méthode d'ajout d'URL (cf. ci-dessus)_
+
+ * Suite au passage en UTF-8 des gadgets d'iGoogle. Ce gadget ne fonctionnait plus correctement (affichage d'erreurs et/ou de caractères bizaroïdes..). Ce problème a été résolu. Grand Merci à Gabriel Wicke pour [http://en.wikipedia.org/wiki/User:Sverdrup/Wikipreview.html ses sources JavaScript en Copyleft de "wiki2html(str)"]... 
+ * Ajout de la possibilité de cliquer sur un lien interne pour rechargement du texte concerné dans le widget même (_vous avez toujours la possibilité de vous rendre sur l'original en cliquant sur le titre du texte_). 
+  BUG : Pour cette fonction, il demeure malheureusement un soucis avec les titres comportant une apostrophe..
+
+
 === Participer aux développements ===
  * Merci d'en faire la demande (bvandeputte at gmail dot com)

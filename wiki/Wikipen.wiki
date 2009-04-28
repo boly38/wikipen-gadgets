@@ -36,6 +36,9 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * Cliquez sur "Obtenir le code" 
  * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
 
+===Aperçu===
+<wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml" height="200" border="0" /> 
+
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"
 

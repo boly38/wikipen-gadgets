@@ -45,6 +45,9 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  Pour mémoire :
  * [http://www.google.com/ig/submit envoi d'un gadget]
 
+=== Evolution du 28/04/2009 ===
+ * Suite à la migration de Wikipen, le gadget n'affichait plus aucun texte. Ce problème a été corrigé.
+
 === Evolution du 29/07/2008 ===
 _pour mettre à jour votre gadget, pensez à vider le cache de votre navigateur, supprimer le gadget et le réintroduire à nouveau par la méthode d'ajout d'URL (cf. ci-dessus)_
 

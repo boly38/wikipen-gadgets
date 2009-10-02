@@ -268,7 +268,9 @@ return texte;
        initWPT('');
    };
 
+   try {
    _IG_RegisterOnloadHandler(onLoadFunc__MODULE_ID__);
+   } catch (errr) {}
     
     function setNewText(title, htmlcontent, lastauthor) {
               // alert(" TITRE : " + title + "\r\n" +
@@ -381,6 +383,7 @@ return texte;
        <span id="wpentext"  class="description" style="font-size: 80%;">(...)</span>
      </td></tr>
     </table>
+    <script> try{ onLoadFunc__MODULE_ID__(); } catch (err) {} </script>
   </body>
 
 ]]></Content>

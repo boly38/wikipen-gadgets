@@ -243,14 +243,19 @@ return texte;
 }
 
 
-
-     _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
+	try {
+	  _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
+	} catch (error) { // NOTHING TO DO !
+	}
 
    var URL_BASE = "http://fr.wikipen.org/wiki";
    var i = 0;
   
    function wpenreload() {
-     _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
+	try {
+	  _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
+	} catch (error) { // NOTHING TO DO !
+	}
        initWPT('');
    }
 

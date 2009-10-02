@@ -255,16 +255,18 @@ return texte;
       initWPT('');
    }
 
-   try {
    _IG_RegisterOnloadHandler(function() {
       var prefs = new _IG_Prefs(__MODULE_ID__);
       wpLanguageCode = prefs.getString("langue");
       wpBaseArticlePath = 'http://' + wpLanguageCode + '.wikipen.org/wiki/';
       wpImageBasePath = 'http://' + wpLanguageCode + '.wikipen.org/images/'+wpLanguageCode+'/';
       URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
-       initWPT('');
+      initWPT('');    
+      try {
+  	      _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
+  	  } catch (error) { // NOTHING TO DO !
+      }
    });
-   } catch (errr) {}
     
     function setNewText(title, htmlcontent, lastauthor) {
               // alert(" TITRE : " + title + "\r\n" +
@@ -333,10 +335,6 @@ return texte;
                  
     }
     
-    try {
-	      _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
-	  } catch (error) { // NOTHING TO DO !
-    }
   </script>
   <style id='page-skin-1' type='text/css'>
     .description {

@@ -283,8 +283,9 @@ return texte;
     }
     
     function initText() {
-      setNewText("", "Veuillez patienter...", 
-      "(...)<br/><br/><br/><br/><br/><br/><br/><br/><br/>&#160;");
+      setNewText("", 
+      "Veuillez patienter...<br/><br/><br/><br/><br/><br/><br/><br/><br/>&#160;", 
+      "(...)");
     }
     
     function initWP(articleName) {

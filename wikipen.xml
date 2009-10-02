@@ -257,7 +257,7 @@ return texte;
 	} catch (error) { // NOTHING TO DO !
 	}
        initWPT('');
-   },
+   };
 
    function onLoadFunc__MODULE_ID__() {
       var prefs = new _IG_Prefs(__MODULE_ID__);
@@ -282,7 +282,7 @@ return texte;
     function initWPT(aAfficher) {
       initText();
       initWP(aAfficher);
-    }
+    };
     
     function initText() {
       setNewText("", "Veuillez patienter...", "(...)");

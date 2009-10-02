@@ -36,10 +36,10 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * Cliquez sur "Obtenir le code" 
  * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
 
-<wiki:comment>
 
+<wiki:comment>
 ===Aperçu===
-<wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml?toto=test4" height="200" border="1" /> 
+<wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml?toto=test5" height="200" border="1" /> 
 
 </wiki:comment>
 

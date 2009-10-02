@@ -243,33 +243,27 @@ return texte;
 }
 
 
-	try {
-	  _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
-	} catch (error) { // NOTHING TO DO !
-	}
 
    var URL_BASE = "http://fr.wikipen.org/wiki";
    var i = 0;
   
    function wpenreload() {
-	try {
-	  _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
-	} catch (error) { // NOTHING TO DO !
-	}
-       initWPT('');
-   };
+    	try {
+    	  _IG_Analytics('UA-1988442-1', '/wikipen-gadget/main/reload');
+    	} catch (error) { // NOTHING TO DO !
+    	}
+      initWPT('');
+   }
 
-   function onLoadFunc__MODULE_ID__() {
+   try {
+   _IG_RegisterOnloadHandler(function() {
       var prefs = new _IG_Prefs(__MODULE_ID__);
       wpLanguageCode = prefs.getString("langue");
       wpBaseArticlePath = 'http://' + wpLanguageCode + '.wikipen.org/wiki/';
       wpImageBasePath = 'http://' + wpLanguageCode + '.wikipen.org/images/'+wpLanguageCode+'/';
       URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
        initWPT('');
-   };
-
-   try {
-   _IG_RegisterOnloadHandler(onLoadFunc__MODULE_ID__);
+   });
    } catch (errr) {}
     
     function setNewText(title, htmlcontent, lastauthor) {
@@ -279,16 +273,16 @@ return texte;
               _gel('wpentitle').innerHTML = title;
               _gel('wpenautor').innerHTML = lastauthor;
               _gel('wpentext').innerHTML  = htmlcontent;
-    };
+    }
     
     function initWPT(aAfficher) {
       initText();
       initWP(aAfficher);
-    };
+    }
     
     function initText() {
       setNewText("", "Veuillez patienter...", "(...)");
-    }; 
+    }
     
     function initWP(articleName) {
       i = (new Date()).getTime();
@@ -338,6 +332,11 @@ return texte;
           });
                  
     }
+    
+    try {
+	      _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
+	  } catch (error) { // NOTHING TO DO !
+    }
   </script>
   <style id='page-skin-1' type='text/css'>
     .description {
@@ -383,7 +382,6 @@ return texte;
        <span id="wpentext"  class="description" style="font-size: 80%;">(...)</span>
      </td></tr>
     </table>
-    <script> try{ onLoadFunc__MODULE_ID__(); } catch (err) {} </script>
   </body>
 
 ]]></Content>

@@ -37,7 +37,7 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
 
 ===Aperçu===
-<wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml" height="200" border="1" /> 
+<wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml?toto=tutu" height="200" border="1" /> 
 
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"

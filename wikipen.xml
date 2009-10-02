@@ -365,10 +365,10 @@ return texte;
      <tr>
       <td colspan="2">
         <table cellpadding="0" cellspacing="0" border="0" width="100%">
-         <tr><td>
-
+         <tr><td align="center">
            <a href="javascript:wpenreload();" 
-            style="display: block; padding: 1px; border: 1px solid blue; text-decoration: none; font-size: 70%;font-style: italic ; background-color: lightblue;">Page&#160;al&eacute;atoire</a><br/>
+            style="display: block; padding: 1px; border: 1px solid blue; text-decoration: none; font-size: 70%;font-style: italic ; background-color: lightblue;"
+            title="Changer de texte">Page&#160;al&eacute;atoire</a><br/>
           </td><td align="right">
            <span class="description" style="font-size: 60%; font-style: italic ;">derni&egrave;re modification par</span> 
            <span id="wpenautor" class="description" style="font-size: 60%; font-style: italic ;"></span>

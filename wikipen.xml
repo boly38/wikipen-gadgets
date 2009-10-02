@@ -351,7 +351,8 @@ return texte;
    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
 	   style="padding:5px;">
       <tr height="5px"><td align="right" style="background-color:lightyellow; font-size: 9px; font-style: italic;" colspan="2">
-		      <a href="http://code.google.com/p/wikipen-gadgets/wiki/Wikipen" title="more informations, or report a bug">By wikipen-gadgets project</a>
+		      <a href="http://code.google.com/p/wikipen-gadgets/wiki/Wikipen" title="more informations, or report a bug">Credits</a>
+		      - (source : <a href="http://fr.wikipen.org" target="_new">Wikipen</a>)
      </td></tr>
      <tr height="10px">
       <td width="40px">
@@ -367,10 +368,9 @@ return texte;
       <td colspan="2">
         <table cellpadding="0" cellspacing="0" border="0" width="100%">
          <tr><td>
-           <a href="http://fr.wikipen.org" target="_new"
-            style="text-decoration: none; font-size: 70%; font-style: italic;">Wikipen</a>
+
            <a href="javascript:wpenreload();" 
-            style="text-decoration: none; font-size: 70%;font-style: italic ;">Page al&eacute;atoire</a><br/>
+            style="display: block; padding: 1px; border: 1px solid blue; text-decoration: none; font-size: 70%;font-style: italic ; background-color: lightblue;">Page&#160;al&eacute;atoire</a><br/>
           </td><td align="right">
            <span class="description" style="font-size: 60%; font-style: italic ;">derni&egrave;re modification par</span> 
            <span id="wpenautor" class="description" style="font-size: 60%; font-style: italic ;"></span>

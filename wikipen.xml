@@ -279,12 +279,7 @@ return texte;
        initWPT('');
    }
 
-   _IG_RegisterOnloadHandler(function () { gadgetloaded(); });
-   try {
-    document.onload = gadgetloaded;
-    } catch (err) {
-     // nothing to do..
-   }
+   _IG_RegisterOnloadHandler(gadgetloaded);
     
     function setNewText(title, htmlcontent, lastauthor) {
               // alert(" TITRE : " + title + "\r\n" +

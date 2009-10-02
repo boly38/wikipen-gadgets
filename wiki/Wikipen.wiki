@@ -35,16 +35,20 @@ Sinon rendez-vous sur [http://www.google.fr/ig?hl=fr iGoogle]
  * Faites les modifications sur la forme (couleur, bordure, taille, ..)
  * Cliquez sur "Obtenir le code" 
  * Copiez le code qui apparaît en dessous et collez le dans votre page Web.
-<!--
+
+<wiki:comment>
+
 ===Aperçu===
 <wiki:gadget url="http://wikipen-gadgets.googlecode.com/svn/wikipen.xml?toto=test4" height="200" border="1" /> 
--->
+
+</wiki:comment>
 
 == Participer aux évolutions ==
  * Rendez-vous sur l'onglet "Issues"
 
  Pour mémoire :
  * [http://www.google.com/ig/submit envoi d'un gadget]
+ * Test du gadget : utiliser le gadget de test.
 
 === Evolution du 2/10/2009 ===
  * Ajout d'un fix : suite à un problème avec Google Analytics et modification de la gestion des preferences (langue fr/en).

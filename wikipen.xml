@@ -331,7 +331,9 @@ return texte;
               var contentautor = xmlText(nxslxauteur);
               contentautor = contentautor.replace(/<p>/g, '')
                                         .replace(/<\/p>/g, '');
-
+              if (contentautor == '') {
+              contentautor = "unknown ?"
+              }
               setNewText(contenttitle, contenttext, contentautor)
           });
                  

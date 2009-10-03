@@ -255,18 +255,6 @@ return texte;
       initWPT('');
    }
 
-   _IG_RegisterOnloadHandler(function() {
-      var prefs = new _IG_Prefs(__MODULE_ID__);
-      wpLanguageCode = prefs.getString("langue");
-      wpBaseArticlePath = 'http://' + wpLanguageCode + '.wikipen.org/wiki/';
-      wpImageBasePath = 'http://' + wpLanguageCode + '.wikipen.org/images/'+wpLanguageCode+'/';
-      URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
-      initWPT('');    
-      try {
-  	      _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
-  	  } catch (error) { // NOTHING TO DO !
-      }
-   });
     
     function setNewText(title, htmlcontent, lastauthor) {
               // alert(" TITRE : " + title + "\r\n" +
@@ -349,7 +337,6 @@ return texte;
     font-family: Arial, sans-serif;
   }
   </style>
-  <body>
    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"
 	   style="padding:5px;">
       <tr height="5px"><td align="right" style="background-color:lightyellow; font-size: 9px; font-style: italic;" colspan="2">
@@ -384,7 +371,21 @@ return texte;
        <span id="wpentext"  class="description" style="font-size: 80%;">(...)</span>
      </td></tr>
     </table>
-  </body>
+  <script>
 
+   _IG_RegisterOnloadHandler(function() {
+      var prefs = new _IG_Prefs(__MODULE_ID__);
+      wpLanguageCode = prefs.getString("langue");
+      wpBaseArticlePath = 'http://' + wpLanguageCode + '.wikipen.org/wiki/';
+      wpImageBasePath = 'http://' + wpLanguageCode + '.wikipen.org/images/'+wpLanguageCode+'/';
+      URL_BASE = "http://" + wpLanguageCode + ".wikipen.org/wiki";
+      initWPT('');    
+      try {
+  	      _IG_Analytics("UA-1988442-1", "/wikipen-gadget/main");
+  	  } catch (error) { // NOTHING TO DO !
+      }
+   });
+     
+  </script>
 ]]></Content>
 </Module>
